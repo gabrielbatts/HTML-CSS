@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias</title>
+</head>
+<body>
+    <h1>Testando imagens variáveis</h1>
+    <picture>
+        <source media="(max-width:750px )" srcset="Imagens/Foto-p.png" type="image/png">
+        <source media="(max-width:1050px )" srcset="Imagens/Foto-M.png" type="image/png">
+        <source media="(max-width: 1250px)" srcset="Imagens/Foto-G.png" type="image/png">
+        <img src="Imagens/Foto-GG.png" alt="Imagen Flexivel">
+    </picture>
+    <h1>Testando Audio</h1>
+    <audio preload="metadata" autoplay controls>
+        <source src="audio/m2.mp3" type="audio/mpeg">
+    </audio>
+    <a href="audio/m2.mp3" download="audio/m2.mp3" type="audio/mpeg">Clique aqui para baixar o audio</a>
+</body>
+</html>
