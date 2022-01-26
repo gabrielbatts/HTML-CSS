@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" target="_blank"> <!--Nessa tag vai ser escrito todo o formulário, action= vai ser pra onde vai ser direcionado o formulário e o target=_blank é pra qnd enviar abrir em outra guia-->
+        <h1>Meu formulário</h1>
+        <p>
+            <label for="nome">Nome:</label> <!-- essa tag label é o nome que fica em cada input como se fosse o cabeçalho do input, o for= é dizendo a que input ele se refere através do ID-->
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required> <!-- esse é um input do tipo text, o id foi lançado no label o name= vai servir pro back end o placeholder= é aquela frase de exemplo na caixa para digitar, e o required é para tornar obrigatorio o preenchimento-->
+        </p>
+        <p>
+            <!--esse input é para clicar em varias opções de marcar, pode marcar + de uma, o value serve para indentificar no back end-->
+            <label for="op1">Cuscuz</label>
+            <input type="checkbox" id="op1" name="op1" value="op1"> <br>
+            <label for="op2">Ovo</label>
+            <input type="checkbox" id="op2" name="op2"> <br>
+            <label for="op3">Feijão</label>
+            <input type="checkbox" id="op3" name="op3">
+        </p>
+        <p>
+            <!--esse tipo de input é para marcar tbm, porém só pode marcar uma opção. OBS: nessa o name tem que ser o mesmo nome-->
+            Gênero: <br>
+            <label for="feminino">Feminino</label>
+            <input type="radio" id="feminino" name="genero" value="feminino"><br>
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="masculino" name="genero" value="masculino"><br>
+            <label for="outros">Outros</label>
+            <input type="radio" id="outro" name="genero" value="outro">             
+        </p>
+        <p> <!-- Esse aqui é para inserir data-->
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
+        </p>
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@email.com" required></p>
+        <p>
+            <!-- Esse aquié o butao de resert e enviar. como estar na mesma tag de form, ele limpa tudo e envia tudo. o type reset -> limpa e o submit -> envia.-->
+            <button type="reset">Reset</button>
+            <button type="submit">Enviar</button>
+        </p>
+
+    </form>
+    
+</body>
+</html>
