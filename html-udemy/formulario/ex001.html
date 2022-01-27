@@ -13,7 +13,7 @@
 </head>
 <body>
     <form action="#" target="_blank"> <!--Nessa tag vai ser escrito todo o formulário, action= vai ser pra onde vai ser direcionado o formulário e o target=_blank é pra qnd enviar abrir em outra guia-->
-        <h1>Meu formulário</h1>
+        <legend>Meu formulário</legend>
         <p>
             <label for="nome">Nome:</label> <!-- essa tag label é o nome que fica em cada input como se fosse o cabeçalho do input, o for= é dizendo a que input ele se refere através do ID-->
             <input type="text" id="nome" name="nome" placeholder="Seu nome" required> <!-- esse é um input do tipo text, o id foi lançado no label o name= vai servir pro back end o placeholder= é aquela frase de exemplo na caixa para digitar, e o required é para tornar obrigatorio o preenchimento-->
@@ -43,14 +43,49 @@
         </p>
         <p>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="exemplo@email.com" required></p>
+            <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+        </p>
+        <p> <!-- esse aqui é para foto, o accept=image/* é para só aceitar arquivo do tipo foto. todos os formatos de fotos. o multiple é para selecionar + de 1 foto/arquivo-->
+            <label for="file">Sua Foto</label> 
+            <input type="file" id="file" name="file" accept="image/*" multiple> 
+        </p>
+        <p> <!-- esse aqui é para número. Obs: o min: é a quantidade minima do valor e max é a quantidade max do valor, o step é para pular de 5 em 5, mas isso não impede de vc digitar o seu número-->
+            <label for="num">Digite um número</label>
+            <input type="number" id="num" name="num" min="1" max="50" step="5">
+        </p>
+        <p>
+            <label for="senha">Digite sua senha</label>
+            <input type="password" id="senha" name="senha">
+        </p>
+        <p> <!-- Esse aqui é uma barrinha de escolha-->
+            <label for="range">Range</label>
+            <input type="range" id="range" min="0" max="10" step="2">
+        </p>
+        <p> <!-- Aqui é pra Link, tem outro input tbm que é o url, porém pro algoritmo de busca essa tag é melhor-->
+            <label for="url">Sua URL</label>
+            <input type="search" id="url" name="url">
+        </p>
+        <p> <!-- vai criar uma opção de seleção, se for poucas não precisa a tag <optgroup>-->
+            <label for="select">Selecione uma opção</label>
+            <select name="select" id="select">
+                <optgroup label="grupo 1"> <!-- essa tag vai separar por grupo dentro do select. o label é pra amostrar o nome do grupo-->
+                    <option value="opp1" label="Churrasco"></option> <!-- primeira opção do grupo e para selecionar. o value é para o back end e o label é o nome-->
+                    <option value="opp2" label="Vegano" disabled></option> <!-- o disabled deixou essa opção desativada-->
+                    <option value="opp3" label="Feijoada"></option>
+                </optgroup>
+                <optgroup label="grupo 2">
+                    <option value="opp1" label="Cerveja"></option>
+                    <option value="opp2" label="Refri"></option>
+                    <option value="opp3" label="Cachaça"></option>
+                </optgroup>
+            </select>
+        </p>
+
         <p>
             <!-- Esse aquié o butao de resert e enviar. como estar na mesma tag de form, ele limpa tudo e envia tudo. o type reset -> limpa e o submit -> envia.-->
             <button type="reset">Reset</button>
             <button type="submit">Enviar</button>
         </p>
-
-    </form>
-    
+    </form>    
 </body>
 </html>
